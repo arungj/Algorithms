@@ -20,6 +20,7 @@ class ResultViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardChanged(_:)), name: .UIKeyboardDidChangeFrame, object: nil)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -110,5 +111,11 @@ class ResultViewController: UIViewController {
         let button = UIAlertAction(title: "Dismiss", style: .default)
         alert.addAction(button)
         present(alert, animated: true)
+    }
+}
+
+extension UIViewController {
+    @objc func keyboardChanged(_ notification: Notification) {
+        
     }
 }
