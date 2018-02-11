@@ -13,9 +13,10 @@ class TableViewController: UITableViewController {
     enum TableOptions: String {
         case palindrome = "Palindrome"
         case pangram = "Pangram"
+        case sumInArray = "Sum in array of numbers"
     }
     
-    let dataSource: [TableOptions] = [.palindrome, .pangram]
+    let dataSource: [TableOptions] = [.palindrome, .pangram, .sumInArray]
     
     override func viewDidLoad() {
         super.viewDidLoad()
